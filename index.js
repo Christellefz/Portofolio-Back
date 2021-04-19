@@ -12,6 +12,4 @@ app.use(express.urlencoded({ extended: true }))
 
 app.use('/account', routes.account)
 
-
-
 app.listen(3000, () => console.log('Express server is running'))
