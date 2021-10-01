@@ -8,7 +8,7 @@ const app = express()
  require("dotenv").config()
 const bodyParser =require("body-parser")
 const stripe = require("stripe")(process.env.STRIPE_SECRET_TEST)
-const port = require(process.env.Port)
+const Port = require(process.env.SERVER_URL)
 const routes = require('./routes/index')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-app.post("https://christellefz.github.io/Portofolio-Back/payment", cors(), async(req, res)=>{
+app.post("/payment", cors(), async(req, res)=>{
   let {amount, id }= req.body
   try{
     const payment = await stripe.paymentIntents.create({
