@@ -13,7 +13,7 @@ const routes = require('./routes/index')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 const corsOptions ={
-  origin:'https://http://localhost:3000/don', 
+  origin:'https://localhost:3000/don', 
   credentials:true,            //access-control-allow-credentials:true
   optionSuccessStatus:200,
 }
