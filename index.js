@@ -1,5 +1,5 @@
 
-Access-Control-Allow-Origin: *
+Access-Control-Allow-Origin: https://localhost:3000/don
 Access-Control-Allow-Methods: POST,GET,PUT,DELETE
 Access-Control-Allow-Headers: Authorization, Langconst cors = require('cors')
 const express = require('express')
@@ -24,7 +24,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
 
-app.post("/payment", cors(), async(req, res)=>{
+app.post("/payment", cors(*), async(req, res)=>{
   let {amount, id }= req.body
   try{
     const payment = await stripe.paymentIntents.create({
