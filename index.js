@@ -1,7 +1,4 @@
 
-Access-Control-Allow-Origin: https://localhost:3000/don
-Access-Control-Allow-Methods: POST,GET,PUT,DELETE
-Access-Control-Allow-Headers: Authorization, Langconst cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
