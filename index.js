@@ -1,4 +1,7 @@
-const cors = require('cors')
+
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: POST,GET,PUT,DELETE
+Access-Control-Allow-Headers: Authorization, Langconst cors = require('cors')
 const express = require('express')
 const morgan = require('morgan')
 const app = express()
